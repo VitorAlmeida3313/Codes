@@ -1,9 +1,7 @@
-import java.util.Scanner;
-
-public class MainCliente {
+public class MainClienteTeste {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        Cliente c = new Cliente();
+        ClienteTeste c = new ClienteTeste();
 
         int menu; 
 
@@ -78,85 +76,97 @@ public class MainCliente {
                         System.out.println("\nDigite um usuário válido!");
 
                     }else{
+                        while (true) {
+                            
+
                         System.out.println("----------------------------\n");
                         System.out.println("O que deseja alterar?" + "\n1- CPF" + "\n2- Nome" + "\n3- Idade" + "\n4- Tudo");
                         int alterar = scn.nextInt();
-                        scn.nextLine();  
-
-                        switch (alterar) {
-                            case 1:
-                                System.out.println("----------------------------\n");
-                                System.out.print("Digite o novo CPF: ");
-                                String cpf = scn.nextLine();
-                                if (usuario == 1) {
-                                    c.setCPF1(cpf);
-                                } else {
-                                    c.setCPF2(cpf);
-                                }
-                                System.out.println("\nCPF alterado com sucesso!");
-                                System.out.println("----------------------------\n");
-                                break;
-                            case 2:
-                                System.out.println("----------------------------\n");
-                                System.out.print("\nDigite o novo nome: ");
-                                String nome = scn.nextLine();
-                                if (usuario == 1) {
-                                    c.setNOME1(nome);
-                                } else {
-                                    c.setNOME2(nome);
-                                }
-                                System.out.println("\nNome alterado com sucesso!");
-                                System.out.println("----------------------------\n");
-                                break;
-                            case 3:
-                                System.out.println("----------------------------\n");
-                                System.out.print("\nDigite a nova idade: ");
-                                int idade = scn.nextInt();
-                                if (usuario == 1) {
-                                    c.setIDADE1(idade);
-                                } else {
-                                    c.setIDADE2(idade);
-                                }
-                                System.out.println("\nIdade alterada com sucesso!");
-                                System.out.println("----------------------------\n");
-                                break;
-                            case 4:
-                                System.out.println("----------------------------\n");
-                                System.out.print("Digite o novo CPF: ");
-                                cpf = scn.nextLine();
-                                if (usuario == 1) {
-                                    c.setCPF1(cpf);
-                                } else {
-                                    c.setCPF2(cpf);
-                                }
-
-                                System.out.print("\nDigite o novo nome: ");
-                                nome = scn.nextLine();
-                                if (usuario == 1) {
-                                    c.setNOME1(nome);
-                                } else {
-                                    c.setNOME2(nome);
-                                }
-
-                                System.out.print("\nDigite a nova idade: ");
-                                idade = scn.nextInt();
-                                if (usuario == 1) {
-                                    c.setIDADE1(idade);
-                                } else {
-                                    c.setIDADE2(idade);
-                                }
-                                System.out.println("\nDados alterados com sucesso!");
-                                System.out.println("----------------------------\n");
-                                break;
-                                
+                        scn.nextLine();
+                        if (alterar <1 || alterar >4) {
+                            System.out.println("Digite uma opção válida!");
+                            
+                        }else{
+                            switch (alterar) {
+                                case 1:
+                                    System.out.println("----------------------------\n");
+                                    System.out.print("Digite o novo CPF: ");
+                                    String cpf = scn.nextLine();
+                                    if (usuario == 1) {
+                                        c.setCPF1(cpf);
+                                    } else {
+                                        c.setCPF2(cpf);
+                                    }
+                                    System.out.println("\nCPF alterado com sucesso!");
+                                    System.out.println("----------------------------\n");
+                                    break;
+                                case 2:
+                                    System.out.println("----------------------------\n");
+                                    System.out.print("\nDigite o novo nome: ");
+                                    String nome = scn.nextLine();
+                                    if (usuario == 1) {
+                                        c.setNOME1(nome);
+                                    } else {
+                                        c.setNOME2(nome);
+                                    }
+                                    System.out.println("\nNome alterado com sucesso!");
+                                    System.out.println("----------------------------\n");
+                                    break;
+                                case 3:
+                                    System.out.println("----------------------------\n");
+                                    System.out.print("\nDigite a nova idade: ");
+                                    int idade = scn.nextInt();
+                                    if (usuario == 1) {
+                                        c.setIDADE1(idade);
+                                    } else {
+                                        c.setIDADE2(idade);
+                                    }
+                                    System.out.println("\nIdade alterada com sucesso!");
+                                    System.out.println("----------------------------\n");
+                                    break;
+                                case 4:
+                                    System.out.println("----------------------------\n");
+                                    System.out.print("Digite o novo CPF: ");
+                                    cpf = scn.nextLine();
+                                    if (usuario == 1) {
+                                        c.setCPF1(cpf);
+                                    } else {
+                                        c.setCPF2(cpf);
+                                    }
+    
+                                    System.out.print("\nDigite o novo nome: ");
+                                    nome = scn.nextLine();
+                                    if (usuario == 1) {
+                                        c.setNOME1(nome);
+                                    } else {
+                                        c.setNOME2(nome);
+                                    }
+    
+                                    System.out.print("\nDigite a nova idade: ");
+                                    idade = scn.nextInt();
+                                    if (usuario == 1) {
+                                        c.setIDADE1(idade);
+                                    } else {
+                                        c.setIDADE2(idade);
+                                    }
+                                    System.out.println("\nDados alterados com sucesso!");
+                                    System.out.println("----------------------------\n");
+                                    
+                                    
+                            }
+                            break;
+                        }
+                        
+                        
                         }
                         break;
-                    
-                    
+                        
                     }
                     
-                }
+                }  
                 break;
+                        
+                
                 
                 case 3: 
                     while (true) {
@@ -165,7 +175,7 @@ public class MainCliente {
                     scn.nextLine();  
                     if (exibir != 1 && exibir !=2) {
                         System.out.println("Digite um usuário válido");
-                        System.out.println("\n----------------------------\n");
+                        System.out.println("----------------------------");
                     }else if (exibir == 1) { 
                         System.out.println("-----------USUÁRIO 1--------\n");
                         System.out.println(c.imprimir1());
